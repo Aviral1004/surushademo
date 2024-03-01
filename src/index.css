@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: Verdana, Geneva;
+}
+html {
+    scroll-behavior: smooth;
+}
+.about1:hover .slash {
+    display: inline;
+    margin-right: 0.5rem;
+    color: #3949AB;
+}
+
+.slick-slide > div {
+    margin: 0 10px;
+}
+
+@media screen and (min-width:  1024) {
+    .slick-slide > div {
+        margin: 0 10px;
+    }
+    .slick-arrow.slick-next,
+    .slick-arrow.slick-prev{
+        background-color: #428cff;
+        height:45px;
+        width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        opacity: 0.8;
+        height:30px;
+        width:30px;
+}
+
+.slick-arrow.slick-next:hover,
+.slick-arrow.slick-prev:hover
+{
+    background-color: #2574f5;
+    opacity:0.8;
+}
+
+.arrows{
+height:30px;
+width:30px;
+margin: 2px;
+
+}
+}
+
+#child {
+    transition: all 0.5s ease-in-out;
+}
+
+#parent:hover #child, #parent:focus #child {
+    background-color: #2574f5;
+}
+#child1 {
+    transition: all 0.5s ease-in-out;
+}
+#child2 {
+    transition: all 0.5s ease-in-out;
+}
+#child3 {
+    transition: all 0.5s ease-in-out;
+}
+
+#child11 {
+    transition: all 0.5s ease-in-out;
+}
+
+#child12 {
+    transition: all 0.5s ease-in-out;
+}
+
+#child13 {
+    transition: all 0.5s ease-in-out;
+}
+
+#child21 {
+    transition: all 0.5s ease-in-out;
+}
+
+#child22 {
+    transition: all 0.5s ease-in-out;
+}
+
+#child23 {
+    transition: all 0.5s ease-in-out;
+}
+
+#child24 {
+    transition: all 0.5s ease-in-out;
+}
+
+
+#parent1:hover #child1, #parent1:focus #child1 {
+    background-color: #2574f5;
+}
+
+#parent2:hover #child2, #parent2:focus #child2 {
+    background-color: #2574f5;
+}
+
+#parent3:hover #child3, #parent3:focus #child3 {
+    background-color: #2574f5;
+}
+
+#parent11:hover #child11, #parent11:focus #child11 {
+    background-color: #2574f5;
+}
+
+#parent12:hover #child12, #parent12:focus #child12 {
+    background-color: #2574f5;
+}
+
+#parent13:hover #child13, #parent13:focus #child13 {
+    background-color: #2574f5;
+}
+
+#parent21:hover #child21, #parent21:focus #child21 {
+    background-color: #2574f5;
+}
+
+#parent22:hover #child22, #parent22:focus #child22 {
+    background-color: #2574f5;
+}
+
+#parent23:hover #child23, #parent23:focus #child23 {
+    background-color: #2574f5;
+}
+
+#parent24:hover #child24, #parent24:focus #child24 {
+    background-color: #2574f5;
+}
+
+
+.invert {
+    filter: invert(1);
+  }
+  
+  .devops:hover .invert{
+    filter: invert(0);
+    transition: filter 0.3s ease-in-out;
+  }
+
+.footerBkg {
+    background-image: url("../src/assets/FooterBg.png"), linear-gradient(to bottom, #42A5F5, #ccfbf1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.meeting1 {
+    background-image: url("../src/assets/meeting1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.meeting2 {
+    background-image: url("../src/assets/meeting2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.meeting3 {
+    background-image: url("../src/assets/meeting3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.meeting4 {
+    background-image: url("../src/assets/meeting4.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.contact {
+    background-image: url("../src/assets/contactBg.png");
+    opacity: 0.8;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.portfolioBg {
+    background-image: url("../src/assets/portBg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+/* CustomerBrands */
+@keyframes loop-scroll_second {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.animate-loop-scroll_second {
+    animation: loop-scroll_second 4s linear infinite;
+}
+
+/* Portfolio cards */
+
+.mainContainer {
+    position: relative;
+}
+
+.mainContainer > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(33, 150, 243, 0.75);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.mainContainer:hover .overlay {
+    height: 50%;
+}
