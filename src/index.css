@@ -3,9 +3,18 @@
 @tailwind utilities;
 
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-break: keep-all;
     font-family: Verdana, Geneva;
 }
-html {
+html, body {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 .about1:hover .slash {
@@ -17,8 +26,20 @@ html {
 .slick-slide > div {
     margin: 0 10px;
 }
+@media screen and (min-width:  640) {
+    html,body {
+        max-width: 100vw;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+} 
 
 @media screen and (min-width:  1024) {
+    html,body {
+        max-width: 100vw;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
     .slick-slide > div {
         margin: 0 10px;
     }
@@ -156,37 +177,38 @@ margin: 2px;
     z-index: -1;
 }
 
-.meeting1 {
-    background-image: url("../src/assets/meeting1.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
+@keyframes slide {
+    100% {
+        transform: translateX(calc(-350px * 12));
+    }
 }
 
-.meeting2 {
-    background-image: url("../src/assets/meeting2.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
+.logos {
+    display: flex;
+    overflow: hidden;
+    padding: 30px 0;
+    white-space: nowrap;
 }
 
-.meeting3 {
-    background-image: url("../src/assets/meeting3.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
+.logos-slide {
+    display: flex;
+    animation: slide 10s infinite linear;
 }
 
-.meeting4 {
-    background-image: url("../src/assets/meeting4.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
+.slide {
+    height: 90px;
+    width: 350px;
 }
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide img {
+    height: 90px;
+    margin: 0 140px;
+}
+
 .contact {
     background-image: url("../src/assets/contactBg.png");
     opacity: 0.8;
@@ -208,7 +230,7 @@ margin: 2px;
         transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 .animate-loop-scroll_second {

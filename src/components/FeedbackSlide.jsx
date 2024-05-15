@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Car from '../assets/carr.jpg';
-import BlondGuy from '../assets/blondGuy.jpeg';
-import Francis from '../assets/francis.jpeg';
-import Antonio from 'G:/reactjs projects/surushaTech/src/assets/antonio.jpeg';
-import David from '../assets/david.jpeg';
+import Car from '../assets/auto1.jpg';
+import BlondGuy from '../assets/blond1.jpg';
+import Francis from '../assets/shiatsu.jpg';
+import Antonio from '../assets/brown.jpg';
+import David from '../assets/dreamwork.jpg';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
@@ -61,11 +61,11 @@ const FeedbackSlide = () => {
         ]
       };
   return (
-    <div className='mt-[-28rem] lg:mt-0 h-full w-full lg:w-5/6  min-h-[100vh] lg:min-h-[140vh] m-auto'>
+    <div className='mt-[-28rem] lg:-mt-16 h-full w-full lg:w-5/6  min-h-[100vh] lg:min-h-[140vh] m-auto'>
         <div className="lg:space-x-8">
             <Slider {...settings}>
                 {data.map((d, idx) => (
-                    <div key={idx} className={`rounded-md shadow-xl lg:mt-8 bg-white ${isClicked[idx] ? 'h-[115vh]' : 'h-[50vh]'} lg:min-h-[65vh] text-black flex flex-row lg:flex-col items-center lg:justify-around justify-evenly z-1000 transition-all duration-500`}>
+                    <div key={idx} className={`rounded-md shadow-xl lg:mt-8 bg-white ${isClicked[idx] ? 'h-[124vh]' : 'h-[65vh]'} lg:min-h-[65vh] text-black flex flex-row lg:flex-col items-center lg:justify-around justify-evenly z-1000 transition-all duration-500`}>
                         <div className='mt-[-2rem] lg:mt-0 h-56 lg:min-h-56 bg-white flex justify-around items-center rounded-t-xl'>
                             <img src={d.img} alt="image" className="mx-4 lg:mx-0 lg:ml-12 h-16 w-16 lg:h-36 lg:w-36 rounded-full object-center lg:object-center flex items-center justify-center" />
                             <div className='flex flex-col items-center justify-around lg:mt-0 mt-4'>
@@ -79,7 +79,7 @@ const FeedbackSlide = () => {
                         </div>
 
                         <div className="flex flex-col items-center justify-center mx-4 lg:mx-8">
-                            <p className="text-center leading-relaxed text-gray-500">
+                            <p className="text-center leading-normal text-gray-500">
                             {isClicked[idx] === false ? `${d.review}...` : `${d.moreReview}`}
 
                             </p>
@@ -121,7 +121,7 @@ const data = [
         position: "Owner, Shiatsu Centre",
         img: Francis,
         review: "Writing to express my sincere gratitude for your outstanding work on my Nordic Shiatsu Centre website. As a small business owner, your guidance and expertise made navigating web development seamless and enjoyable.",
-        moreReview: "Writing to express my sincere gratitude for your outstanding work on my Nordic Shiatsu Centre website. As a small business owner, navigating web development felt overwhelming at first. However, your guidance and expertise made the entire process smooth and stress-free. I was particularly impressed with your patient communication style, clear deadlines, and collaborative design approach. You always took the time to answer my questions thoroughly and ensured I was involved in every step of the process. The final product speaks for itself. The website beautifully reflects the essence of our center and perfectly captures the serenity and tranquility we offer our clients. I am confident it will be instrumental in attracting new clients and showcasing the unique services we provide. You have exceeded my expectations and I am truly grateful for your dedication and professionalism. "    
+        moreReview: "However, your guidance and expertise transformed the process into a smooth and stress-free experience. I was particularly impressed by your approachable communication style, adherence to established deadlines, and inclusive design approach. You always took the time to provide comprehensive answers to my questions and ensured I was actively involved at every stage. The final product speaks volumes. The website beautifully embodies the essence of our center, perfectly capturing the serenity and tranquility we offer our clients. I am confident it will play a vital role in attracting new clients and showcasing the unique services we provide. You have not only met, but surpassed my expectations, and I am truly grateful for your dedication and professionalism."    
     },
     {
         name: "Richards",
